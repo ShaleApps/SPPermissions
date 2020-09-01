@@ -100,7 +100,7 @@ public class SPPermissionsDialogController: UIViewController, SPPermissionsContr
         panGesture.maximumNumberOfTouches = 1
         dialogView.addGestureRecognizer(panGesture)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     public override func viewDidLayoutSubviews() {
@@ -304,7 +304,7 @@ public class SPPermissionsDialogController: UIViewController, SPPermissionsContr
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
 }
 
