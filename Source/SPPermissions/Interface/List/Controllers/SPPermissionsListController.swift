@@ -76,11 +76,11 @@ public class SPPermissionsListController: UITableViewController, SPPermissionsCo
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        if #available(iOS 13.0, *) {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissAnimated))
-        } else {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissAnimated))
-        }
+//        if #available(iOS 13.0, *) {
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissAnimated))
+//        } else {
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissAnimated))
+//        }
 
         navigationItem.title = titleText
         navigationItem.largeTitleDisplayMode = .automatic
